@@ -1,0 +1,22 @@
+{
+  "name": "jason",
+  "version": "1.0.0",
+  "description": "Jason is a Slack bot that formats your JSON",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielrobertson/jason.git"
+  },
+  "author": "danielrobertson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielrobertson/jason/issues"
+  },
+  "homepage": "https://github.com/danielrobertson/jason#readme",
+  "dependencies": {
+    "botkit": "^0.5.2"
+  }
+}
