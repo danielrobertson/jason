@@ -8,8 +8,8 @@
  * lt --port 8765 --subdomain jason
  * CLIENT_ID="" CLIENT_SECRET="" VERIFICATION_TOKEN="" PORT=8765 node bot.js
  */
-
 var Botkit = require('botkit');
+var beautify = require('js-beautify'); 
 
 if (!process.env.CLIENT_ID || !process.env.CLIENT_SECRET || !process.env.PORT || !process.env.VERIFICATION_TOKEN) {
     console.log('Error: Specify CLIENT_ID, CLIENT_SECRET, VERIFICATION_TOKEN and PORT in environment');
@@ -55,7 +55,7 @@ controller.on('slash_command', function (slashCommand, message) {
             	return; // irl should throw error here because the caller could be an imposter instead of our Slack team
 
             // format this 💩
-            slashCommand.replyPublic(message, "```" + JSON.stringify(message.text, null, 4) + "```");
+            slashCommand.replyPublic(message, beautify(message.text, { indent_size: 2 }));
 
             break;
         default:

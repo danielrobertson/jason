@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/danielrobertson/jason#readme",
   "dependencies": {
-    "botkit": "^0.5.2"
+    "botkit": "^0.5.2",
+    "js-beautify": "^1.6.12",
+    "json": "^9.0.6",
+    "prettyjson": "^1.2.1"
   }
 }
